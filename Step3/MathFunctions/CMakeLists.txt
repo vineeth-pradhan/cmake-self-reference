@@ -7,7 +7,7 @@ add_library(MathFunctions MathFunctions.cxx)
 target_include_directories(MathFunctions INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
 # should we use our own math functions
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
-if (USE_MYMATH)
+if (USE_MYMATH STREQUAL ON)
   target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 
   # library that just does sqrt
