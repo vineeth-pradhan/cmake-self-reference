@@ -37,4 +37,4 @@ install(TARGETS ${installable_libs} DESTINATION lib)
 
 # TODO 2: Install the library headers to the include folder.
 # Hint: Use the FILES and DESTINATION parameters
-# install(FILES MathFunctions.h DESTINATION include)
+install(FILES MathFunctions.h DESTINATION include)

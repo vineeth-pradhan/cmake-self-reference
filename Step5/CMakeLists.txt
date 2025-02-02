@@ -40,7 +40,7 @@ install(TARGETS Tutorial DESTINATION bin)
 
 # TODO 4: Install TutorialConfig.h to the include directory
 # Hint: Use the FILES and DESTINATION parameters
-# install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
+install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
 
 # TODO 5: Enable testing
 enable_testing()
