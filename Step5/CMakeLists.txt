@@ -65,3 +65,15 @@ set_tests_properties(STANDARD_USE PROPERTIES PASS_REGULAR_EXPRESSION "4 is 2")
 
 # TODO 9: Add more tests. Create a function called do_test to avoid copy +
 # paste. Test the following values: 4, 9, 5, 7, 25, -25 and 0.0001.
+
+function(do_test test_sample assertion)
+  add_test(NAME ${test_sample} COMMAND Tutorial ${test_sample})
+  set_tests_properties(${test_sample} PROPERTIES PASS_REGULAR_EXPRESSION ${assertion})
+endfunction()
+
+do_test(4 "4 is 2")
+do_test(9 "9 is 3")
+do_test(5 "5 is 2.236")
+do_test(7 "7 is 2.645")
+do_test(25 "25 is 5")
+do_test(0.0001 "0.0001 is 0.01")
