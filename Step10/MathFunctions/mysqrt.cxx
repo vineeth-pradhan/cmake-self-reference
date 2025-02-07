@@ -1,7 +1,5 @@
 #include <iostream>
 
-#include "MathFunctions.h"
-
 // include the generated table
 #include "Table.h"
 

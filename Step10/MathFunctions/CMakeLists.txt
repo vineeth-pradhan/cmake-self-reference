@@ -43,3 +43,9 @@ endif()
 install(TARGETS ${installable_libs} DESTINATION lib)
 # install include headers
 install(FILES MathFunctions.h DESTINATION include)
+
+# Option to build shared libraries by default
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
