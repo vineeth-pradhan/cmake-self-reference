@@ -50,6 +50,7 @@ install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
 install(EXPORT MathFunctionsInterface
         DESTINATION lib/cmake/MathFunctions
        )
+include(CMakePackageConfigHelpers)
 
 # enable testing
 include(CTest)
