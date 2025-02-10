@@ -61,6 +61,19 @@ configure_package_config_file (
   NO_CHECK_REQUIRED_COMPONENTS_MACRO
 )
 
+# Demand minimum version required
+write_basic_package_version_file(
+  "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsConfigVersion.cmake"
+  VERSION "${Tutorial_VERSION_MAJOR}.${Tutorial_VERSION_MINOR}"
+  COMPATIBILITY AnyNewerVersion
+)
+
+install(FILES
+  "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsConfigVersion.cmake"
+  DESTINATION lib/cmake/MathFunctions
+)
+
 # enable testing
 include(CTest)
 
@@ -98,3 +111,9 @@ set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
 set(CPACK_GENERATOR "TGZ")
 set(CPACK_SOURCE_GENERATOR "TGZ")
 include(CPack)
+
+# Export this package to be used from the building
+# directory without needing it to be installed
+export(EXPORT MathFunctionsInterface
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsInterface.cmake"
+)
