@@ -43,25 +43,25 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/Users/vineeth/Practice/c++/cmake-practice/Step12/debug/Tutoriald")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Tutoriald" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Tutoriald")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/Users/vineeth/Practice/c++/cmake-practice/Step12/debug/SquareRootd")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SquareRootd" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SquareRootd")
     execute_process(COMMAND /usr/bin/install_name_tool
       -delete_rpath "/Users/vineeth/Practice/c++/cmake-practice/Step12/debug"
       -add_rpath "@executable_path/../lib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Tutoriald")
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SquareRootd")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -u -r "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Tutoriald")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -u -r "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SquareRootd")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/Users/vineeth/Practice/c++/cmake-practice/Step12/debug/CMakeFiles/Tutorial.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
+  include("/Users/vineeth/Practice/c++/cmake-practice/Step12/debug/CMakeFiles/SquareRoot.dir/install-cxx-module-bmi-Debug.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/vineeth/Practice/c++/cmake-practice/Step12/debug/TutorialConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/vineeth/Practice/c++/cmake-practice/Step12/debug/SquareRootConfig.h")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -6,7 +6,7 @@ add_library(MathFunctions MathFunctions.cxx)
 
 target_include_directories(MathFunctions INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
 # should we use our own math functions
-option(USE_MYMATH "Use tutorial provided math implementation" ON)
+option(USE_MYMATH "Use square_root provided math implementation" ON)
 if (USE_MYMATH STREQUAL ON)
   target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 
@@ -15,11 +15,11 @@ if (USE_MYMATH STREQUAL ON)
               mysqrt.cxx
               )
 
-  # TODO 6: Link SqrtLibrary to tutorial_compiler_flags
-  target_link_libraries(SqrtLibrary INTERFACE tutorial_compiler_flags)
+  # TODO 6: Link SqrtLibrary to square_root_compiler_flags
+  target_link_libraries(SqrtLibrary INTERFACE square_root_compiler_flags)
 
   target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
 endif()
 
-# TODO 7: Link MathFunctions to tutorial_compiler_flags
-target_link_libraries(MathFunctions INTERFACE tutorial_compiler_flags)
+# TODO 7: Link MathFunctions to square_root_compiler_flags
+target_link_libraries(MathFunctions INTERFACE square_root_compiler_flags)

@@ -1,0 +1,4 @@
+// the configured options and settings for SquareRoot
+// TODO 10: Define SquareRoot_VERSION_MAJOR and SquareRoot_VERSION_MINOR
+#define SquareRoot_VERSION_MAJOR @SquareRoot_VERSION_MAJOR@
+#define SquareRoot_VERSION_MINOR @SquareRoot_VERSION_MINOR@

@@ -3,15 +3,15 @@
 #include <iostream>
 #include <string>
 
-// TODO 11: Include TutorialConfig.h
-#include <TutorialConfig.h>
+// TODO 11: Include SquareRootConfig.h
+#include <SquareRootConfig.h>
 
 int main(int argc, char* argv[])
 {
   if (argc < 2) {
-    // TODO 12: Create a print statement using Tutorial_VERSION_MAJOR
-    //          and Tutorial_VERSION_MINOR
-    std::cout << argv[0] << " " << Tutorial_VERSION_MAJOR << "." << Tutorial_VERSION_MINOR << "\n";
+    // TODO 12: Create a print statement using SquareRoot_VERSION_MAJOR
+    //          and SquareRoot_VERSION_MINOR
+    std::cout << argv[0] << " " << SquareRoot_VERSION_MAJOR << "." << SquareRoot_VERSION_MINOR << "\n";
     std::cout << "Usage: " << argv[0] << " number" << std::endl;
     return 1;
   }

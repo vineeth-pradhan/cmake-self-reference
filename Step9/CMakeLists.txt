@@ -1,42 +1,42 @@
 cmake_minimum_required(VERSION 3.15)
 
 # set the project name and version
-project(Tutorial VERSION 1.0)
+project(SquareRoot VERSION 1.0)
 
 # specify the C++ standard
-add_library(tutorial_compiler_flags INTERFACE)
-target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
+add_library(square_root_compiler_flags INTERFACE)
+target_compile_features(square_root_compiler_flags INTERFACE cxx_std_11)
 
 # add compiler warning flags just when building this project via
 # the BUILD_INTERFACE genex
 set(gcc_like_cxx "$<COMPILE_LANG_AND_ID:CXX,ARMClang,AppleClang,Clang,GNU,LCC>")
 set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
-target_compile_options(tutorial_compiler_flags INTERFACE
+target_compile_options(square_root_compiler_flags INTERFACE
   "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>>"
   "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
 )
 
 # configure a header file to pass some of the CMake settings
 # to the source code
-configure_file(TutorialConfig.h.in TutorialConfig.h)
+configure_file(SquareRootConfig.h.in SquareRootConfig.h)
 
 # add the MathFunctions library
 add_subdirectory(MathFunctions)
 
 # add the executable
-add_executable(Tutorial tutorial.cxx)
+add_executable(SquareRoot square_root.cxx)
 
-target_link_libraries(Tutorial PUBLIC MathFunctions tutorial_compiler_flags)
+target_link_libraries(SquareRoot PUBLIC MathFunctions square_root_compiler_flags)
 
 # add the binary tree to the search path for include files
-# so that we will find TutorialConfig.h
-target_include_directories(Tutorial PUBLIC
+# so that we will find SquareRootConfig.h
+target_include_directories(SquareRoot PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
 
 # add the install targets
-install(TARGETS Tutorial DESTINATION bin)
-install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
+install(TARGETS SquareRoot DESTINATION bin)
+install(FILES "${PROJECT_BINARY_DIR}/SquareRootConfig.h"
   DESTINATION include
   )
 
@@ -44,10 +44,10 @@ install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
 include(CTest)
 
 # does the application run
-add_test(NAME Runs COMMAND Tutorial 25)
+add_test(NAME Runs COMMAND SquareRoot 25)
 
 # does the usage message work?
-add_test(NAME Usage COMMAND Tutorial)
+add_test(NAME Usage COMMAND SquareRoot)
 set_tests_properties(Usage
   PROPERTIES PASS_REGULAR_EXPRESSION "Usage:.*number"
   )
@@ -61,19 +61,19 @@ function(do_test target arg result)
 endfunction()
 
 # do a bunch of result based tests
-do_test(Tutorial 4 "4 is 2")
-do_test(Tutorial 9 "9 is 3")
-do_test(Tutorial 5 "5 is 2.236")
-do_test(Tutorial 7 "7 is 2.645")
-do_test(Tutorial 25 "25 is 5")
-do_test(Tutorial -25 "-25 is (-nan|nan|0)")
-do_test(Tutorial 0.0001 "0.0001 is 0.01")
+do_test(SquareRoot 4 "4 is 2")
+do_test(SquareRoot 9 "9 is 3")
+do_test(SquareRoot 5 "5 is 2.236")
+do_test(SquareRoot 7 "7 is 2.645")
+do_test(SquareRoot 25 "25 is 5")
+do_test(SquareRoot -25 "-25 is (-nan|nan|0)")
+do_test(SquareRoot 0.0001 "0.0001 is 0.01")
 
 # CPack
 include(InstallRequiredSystemLibraries)
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
-set(CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
-set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_MAJOR "${SquareRoot_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${SquareRoot_VERSION_MINOR}")
 set(CPACK_GENERATOR "TGZ")
 set(CPACK_SOURCE_GENERATOR "TGZ")
 include(CPack)

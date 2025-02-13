@@ -7,7 +7,7 @@ target_include_directories(MathFunctions
                            )
 
 # should we use our own math functions
-option(USE_MYMATH "Use tutorial provided math implementation" ON)
+option(USE_MYMATH "Use square_root provided math implementation" ON)
 if (USE_MYMATH)
   target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 
@@ -16,17 +16,17 @@ if (USE_MYMATH)
               mysqrt.cxx
               )
 
-  # link SqrtLibrary to tutorial_compiler_flags
-  target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
+  # link SqrtLibrary to square_root_compiler_flags
+  target_link_libraries(SqrtLibrary PUBLIC square_root_compiler_flags)
 
   target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
 endif()
 
-# link MathFunctions to tutorial_compiler_flags
-target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
+# link MathFunctions to square_root_compiler_flags
+target_link_libraries(MathFunctions PUBLIC square_root_compiler_flags)
 
 # install libs
-set(installable_libs MathFunctions tutorial_compiler_flags)
+set(installable_libs MathFunctions square_root_compiler_flags)
 if(TARGET SqrtLibrary)
   list(APPEND installable_libs SqrtLibrary)
 endif()

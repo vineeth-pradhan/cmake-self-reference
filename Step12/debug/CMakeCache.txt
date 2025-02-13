@@ -149,7 +149,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Tutorial
+CMAKE_PROJECT_NAME:STATIC=SquareRoot
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.0
@@ -232,15 +232,15 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Tutorial_BINARY_DIR:STATIC=/Users/vineeth/Practice/c++/cmake-practice/Step12/debug
+SquareRoot_BINARY_DIR:STATIC=/Users/vineeth/Practice/c++/cmake-practice/Step12/debug
 
 //Value Computed by CMake
-Tutorial_IS_TOP_LEVEL:STATIC=ON
+SquareRoot_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Tutorial_SOURCE_DIR:STATIC=/Users/vineeth/Practice/c++/cmake-practice/Step12
+SquareRoot_SOURCE_DIR:STATIC=/Users/vineeth/Practice/c++/cmake-practice/Step12
 
-//Use tutorial provided math implementation
+//Use square_root provided math implementation
 USE_MYMATH:BOOL=ON
 
 

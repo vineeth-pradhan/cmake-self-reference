@@ -1,3 +1,3 @@
 include("release/CPackConfig.cmake")
 
-set(CPACK_INSTALL_CMAKE_PROJECTS "debug;Tutorial;ALL;/" "release;Tutorial;ALL;/")
+set(CPACK_INSTALL_CMAKE_PROJECTS "debug;SquareRoot;ALL;/" "release;SquareRoot;ALL;/")

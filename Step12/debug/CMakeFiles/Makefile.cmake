@@ -125,7 +125,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Users/vineeth/Practice/c++/cmake-practice/Step12/Config.cmake.in"
   "/Users/vineeth/Practice/c++/cmake-practice/Step12/MathFunctions/CMakeLists.txt"
   "/Users/vineeth/Practice/c++/cmake-practice/Step12/MathFunctions/MakeTable.cmake"
-  "/Users/vineeth/Practice/c++/cmake-practice/Step12/TutorialConfig.h.in"
+  "/Users/vineeth/Practice/c++/cmake-practice/Step12/SquareRootConfig.h.in"
   "CMakeFiles/3.31.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeSystem.cmake"
@@ -144,7 +144,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.31.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.4/CMakeCXXCompiler.cmake"
-  "TutorialConfig.h"
+  "SquareRootConfig.h"
   "CPackConfig.cmake"
   "CPackSourceConfig.cmake"
   "MathFunctionsConfig.cmake"
@@ -155,7 +155,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Tutorial.dir/DependInfo.cmake"
+  "CMakeFiles/SquareRoot.dir/DependInfo.cmake"
   "MathFunctions/CMakeFiles/MathFunctions.dir/DependInfo.cmake"
   "MathFunctions/CMakeFiles/MakeTable.dir/DependInfo.cmake"
   "MathFunctions/CMakeFiles/SqrtLibrary.dir/DependInfo.cmake"

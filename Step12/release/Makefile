@@ -192,17 +192,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Tutorial
+# Target rules for targets named SquareRoot
 
 # Build rule for target.
-Tutorial: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial
-.PHONY : Tutorial
+SquareRoot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SquareRoot
+.PHONY : SquareRoot
 
 # fast build rule for target.
-Tutorial/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/build
-.PHONY : Tutorial/fast
+SquareRoot/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SquareRoot.dir/build.make CMakeFiles/SquareRoot.dir/build
+.PHONY : SquareRoot/fast
 
 #=============================================================================
 # Target rules for targets named MathFunctions
@@ -243,29 +243,29 @@ SqrtLibrary/fast:
 	$(MAKE) $(MAKESILENT) -f MathFunctions/CMakeFiles/SqrtLibrary.dir/build.make MathFunctions/CMakeFiles/SqrtLibrary.dir/build
 .PHONY : SqrtLibrary/fast
 
-tutorial.o: tutorial.cxx.o
-.PHONY : tutorial.o
+square_root.o: square_root.cxx.o
+.PHONY : square_root.o
 
 # target to build an object file
-tutorial.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/tutorial.cxx.o
-.PHONY : tutorial.cxx.o
+square_root.cxx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SquareRoot.dir/build.make CMakeFiles/SquareRoot.dir/square_root.cxx.o
+.PHONY : square_root.cxx.o
 
-tutorial.i: tutorial.cxx.i
-.PHONY : tutorial.i
+square_root.i: square_root.cxx.i
+.PHONY : square_root.i
 
 # target to preprocess a source file
-tutorial.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/tutorial.cxx.i
-.PHONY : tutorial.cxx.i
+square_root.cxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SquareRoot.dir/build.make CMakeFiles/SquareRoot.dir/square_root.cxx.i
+.PHONY : square_root.cxx.i
 
-tutorial.s: tutorial.cxx.s
-.PHONY : tutorial.s
+square_root.s: square_root.cxx.s
+.PHONY : square_root.s
 
 # target to generate assembly for a file
-tutorial.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/tutorial.cxx.s
-.PHONY : tutorial.cxx.s
+square_root.cxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SquareRoot.dir/build.make CMakeFiles/SquareRoot.dir/square_root.cxx.s
+.PHONY : square_root.cxx.s
 
 # Help Target
 help:
@@ -285,10 +285,10 @@ help:
 	@echo "... MakeTable"
 	@echo "... MathFunctions"
 	@echo "... SqrtLibrary"
-	@echo "... Tutorial"
-	@echo "... tutorial.o"
-	@echo "... tutorial.i"
-	@echo "... tutorial.s"
+	@echo "... SquareRoot"
+	@echo "... square_root.o"
+	@echo "... square_root.i"
+	@echo "... square_root.s"
 .PHONY : help
 
 

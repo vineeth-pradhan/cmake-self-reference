@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS MathFunctions tutorial_compiler_flags SqrtLibrary)
+foreach(_cmake_expected_target IN ITEMS MathFunctions square_root_compiler_flags SqrtLibrary)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -51,13 +51,13 @@ add_library(MathFunctions SHARED IMPORTED)
 
 set_target_properties(MathFunctions PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "/Users/vineeth/Practice/c++/cmake-practice/Step12/MathFunctions"
-  INTERFACE_LINK_LIBRARIES "tutorial_compiler_flags"
+  INTERFACE_LINK_LIBRARIES "square_root_compiler_flags"
 )
 
-# Create imported target tutorial_compiler_flags
-add_library(tutorial_compiler_flags INTERFACE IMPORTED)
+# Create imported target square_root_compiler_flags
+add_library(square_root_compiler_flags INTERFACE IMPORTED)
 
-set_target_properties(tutorial_compiler_flags PROPERTIES
+set_target_properties(square_root_compiler_flags PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
   INTERFACE_COMPILE_OPTIONS "\$<\$<COMPILE_LANG_AND_ID:CXX,ARMClang,AppleClang,Clang,GNU,LCC>:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>;\$<\$<COMPILE_LANG_AND_ID:CXX,MSVC>:-W3>"
 )
@@ -66,7 +66,7 @@ set_target_properties(tutorial_compiler_flags PROPERTIES
 add_library(SqrtLibrary STATIC IMPORTED)
 
 set_target_properties(SqrtLibrary PROPERTIES
-  INTERFACE_LINK_LIBRARIES "tutorial_compiler_flags"
+  INTERFACE_LINK_LIBRARIES "square_root_compiler_flags"
 )
 
 # Import target "MathFunctions" for configuration "Release"
